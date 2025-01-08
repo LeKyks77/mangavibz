@@ -28,7 +28,7 @@
 /* Limiter la largeur et réduire la taille globale du carrousel */
 .carousel {
   max-width: 100%; /* Réduction à 2/3 de la largeur d'origine */
-  max-height: 66.67%; /* Réduction à 2/3 de la hauteur d'origine */
+  max-height: 100%; /* Réduction à 2/3 de la hauteur d'origine */
   margin: 0 auto; /* Centrer le carrousel horizontalement */
 }
 
