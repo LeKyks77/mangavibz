@@ -9,6 +9,42 @@
   height: auto;
 }
 
+/* Style personnalisé pour "MANGAVIBZ" */
+.mangavibz-title {
+  font-size: 4rem; /* Agrandir le texte */
+  font-weight: bold; /* Rendre le texte gras */
+  color: white; /* Couleur blanche pour ressortir */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ajouter une ombre pour une meilleure visibilité */
+  text-align: center; /* Centrer horizontalement */
+}
+
+/* Centrer le texte au milieu verticalement */
+.carousel-caption {
+  top: 50%; /* Centrer verticalement */
+  transform: translateY(-50%); /* Ajustement pour le vrai centrage */
+  text-align: center;
+}
+
+/* Contrôles du carrousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Ajouter une couleur de fond pour mieux voir les icônes */
+  border-radius: 50%; /* Rendre les icônes circulaires */
+  padding: 10px;
+}
+
+/* Indicateurs (petits points en bas) */
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.8); /* Couleur des indicateurs */
+  border: 1px solid #fff;
+}
+
+.carousel-indicators .active {
+  background-color: #fff; /* Couleur différente pour l'indicateur actif */
+}
+
 .u-section-1 .u-carousel-indicators-1 {
   position: absolute;
   width: auto;
