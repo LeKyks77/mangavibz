@@ -12,6 +12,11 @@
     <meta name="generator" content="Nicepage 7.2.3, nicepage.com">
     
     
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Bootstrap JS + Popper.js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     
     
@@ -106,42 +111,50 @@
           
         </div>
       </div></header>
-    <section class="u-align-center u-clearfix u-container-align-center u-valign-middle u-section-1" id="carousel_74e2">
-      <div id="carousel-6492" data-interval="5000" data-u-ride="carousel" class="u-carousel u-carousel-duration-1000 u-carousel-left u-expanded-width u-hidden-xs u-slider u-slider-1">
-        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
-          <li data-u-target="#carousel-6492" class="u-active u-active-grey-25 u-shape-circle u-white" data-u-slide-to="0" style="width: 10px; height: 10px;"></li>
-          <li data-u-target="#carousel-6492" class="u-active-grey-25 u-shape-circle u-white" data-u-slide-to="1" style="width: 10px; height: 10px;"></li>
-        </ol>
-        <div class="u-carousel-inner" role="listbox">
-          <div class="u-active u-align-center u-carousel-item u-container-align-center u-container-style u-image u-shading u-slide u-image-1" data-image-width="1250" data-image-height="300">
-            <div class="u-container-layout u-valign-middle u-container-layout-1">
-              <h2 class="u-align-center u-text u-text-body-alt-color u-text-1">MANGAVIBZ</h2>
-            </div>
-          </div>
-          <div class="custom-expanded u-carousel-item u-container-style u-image u-slide u-image-2" data-image-width="1250" data-image-height="300">
-            <div class="u-container-layout u-valign-middle u-container-layout-2">
-              <h2 class="u-text u-text-body-alt-color u-text-default u-text-2">MANGAVIBZ</h2>
-            </div>
-          </div>
+  <!-- Carrousel -->
+<section class="u-align-center u-clearfix u-container-align-center u-valign-middle u-section-1" id="carousel_74e2">
+  <div id="carousel-6492" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Indicateurs -->
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carousel-6492" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carousel-6492" data-bs-slide-to="1"></li>
+    </ol>
+    
+    <!-- Contenu du carrousel -->
+    <div class="carousel-inner">
+      <!-- Première image -->
+      <div class="carousel-item active">
+        <img src="images/img1.jpg" class="d-block w-100" alt="Image 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>MANGAVIBZ</h5>
         </div>
-        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-spacing-12 u-text-body-alt-color u-carousel-control-1" href="#carousel-6492" role="button" data-u-slide="prev">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 8 8"><path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path></svg>
-          </span>
-          <span class="sr-only">
-            <svg viewBox="0 0 8 8"><path d="M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z"></path></svg>
-          </span>
-        </a>
-        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-spacing-12 u-text-body-alt-color u-carousel-control-2" href="#carousel-6492" role="button" data-u-slide="next">
-          <span aria-hidden="true">
-            <svg viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path></svg>
-          </span>
-          <span class="sr-only">
-            <svg viewBox="0 0 8 8"><path d="M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z"></path></svg>
-          </span>
-        </a>
       </div>
-    </section>
+      
+      <!-- Deuxième image -->
+      <div class="carousel-item">
+        <img src="images/img2.jpg" class="d-block w-100" alt="Image 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>MANGAVIBZ</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contrôle gauche -->
+    <a class="carousel-control-prev" href="#carousel-6492" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </a>
+    
+    <!-- Contrôle droit -->
+    <a class="carousel-control-next" href="#carousel-6492" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </a>
+    
+  </div>
+</section>
+
     <section class="u-clearfix u-grey-90 u-section-2" id="sec-9435">
  <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Tags","source":"","tags":"","count":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width u-layout-horizontal u-blog-1">
