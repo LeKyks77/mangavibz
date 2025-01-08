@@ -11,7 +11,7 @@
 
 /* Style personnalisé pour "MANGAVIBZ" */
 .mangavibz-title {
-  font-size: 4rem; /* Agrandir le texte */
+  font-size: 3rem; /* Agrandir le texte */
   font-weight: bold; /* Rendre le texte gras */
   color: white; /* Couleur blanche pour ressortir */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ajouter une ombre pour une meilleure visibilité */
@@ -23,6 +23,21 @@
   top: 50%; /* Centrer verticalement */
   transform: translateY(-50%); /* Ajustement pour le vrai centrage */
   text-align: center;
+}
+
+/* Limiter la largeur et réduire la taille globale du carrousel */
+.carousel {
+  max-width: 66.67%; /* Réduction à 2/3 de la largeur d'origine */
+  max-height: 66.67%; /* Réduction à 2/3 de la hauteur d'origine */
+  margin: 0 auto; /* Centrer le carrousel horizontalement */
+  overflow: hidden; /* Assurez-vous qu'il n'y ait pas de débordement */
+}
+
+/* Images du carrousel */
+.carousel-inner img {
+  object-fit: cover; /* Ajuste les images pour qu'elles remplissent leur conteneur */
+  width: 100%; /* Assurez-vous que les images s'adaptent à la largeur */
+  height: auto; /* Préserve les proportions des images */
 }
 
 /* Contrôles du carrousel */
