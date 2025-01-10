@@ -153,59 +153,82 @@
 </section>
 
 
-<!-- Section du carrousel -->
-<section class="u-clearfix u-grey-90 u-section-2" id="sec-9435">
-    <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
-        <div class="carousel" id="image-carousel">
-            <!-- Image 1 -->
-            <div class="carousel-item" style="background-image: url('images/bleach1.jpg');">
-                <a href="BLEACH.html" target="_blank">
-                    <div class="carousel-content">
-                        <h2>BLEACH</h2>
-                        <span>10 janv. 2025</span> <!-- janv. fev. mar. avr. mai. juin. juil. aôut. sept. oct. nov. dec. -->
-                    </div>
-                </a>
-            </div>
 
-            <!-- Image 2 -->
-            <div class="carousel-item" style="background-image: url('images/onepiece.jpeg');">
-                <a href="ONEPIECE.html" target="_blank">
-                    <div class="carousel-content">
-                        <h2>ONE PIECE</h2>
-                        <span>10 janv. 2025</span> <!-- janv. fev. mar. avr. mai. juin. juil. aôut. sept. oct. nov. dec. -->
-                    </div>
-                </a>
-            </div>
+  <!-- Section du carrousel -->
+  <section id="sec-9435">
+    <div id="image-carousel">
+      <!-- Image 1 -->
+      <div class="carousel-item" style="background-image: url('images/bleach1.jpg');">
+        <a href="BLEACH.html" target="_blank">
+          <h2>BLEACH</h2>
+          <span>08 janv. 2025</span>
+        </a>
+      </div>
 
-            <!-- Image 3 -->
-            <div class="carousel-item" style="background-image: url('images/spyxfamily.png');">
-                <a href="SPYXFAMILY.html" target="_blank">
-                    <div class="carousel-content">
-                        <h2>SPY-X-FAMILY</h2>
-                        <span>06 oct. 2024</span> <!-- janv. fev. mar. avr. mai. juin. juil. aôut. sept. oct. nov. dec. -->
-                    </div>
-                </a>
-            </div>
+      <!-- Image 2 -->
+      <div class="carousel-item" style="background-image: url('images/onepiece.jpeg');">
+        <a href="ONEPIECE.html" target="_blank">
+          <h2>ONE PIECE</h2>
+          <span>06 oct. 2024</span>
+        </a>
+      </div>
 
-            <!-- Image 4 -->
-            <div class="carousel-item" style="background-image: url('images/orange.jpg');">
-                <a href="ORANGE.html" target="_blank">
-                    <div class="carousel-content">
-                        <h2>ORANGE</h2>
-                        <span>06 oct. 2024</span> <!-- janv. fev. mar. avr. mai. juin. juil. aôut. sept. oct. nov. dec. -->
-                    </div>
-                </a>
-            </div>
-        </div>
+      <!-- Image 3 -->
+      <div class="carousel-item" style="background-image: url('images/spyxfamily.png');">
+        <a href="SPYXFAMILY.html" target="_blank">
+          <h2>SPY-X-FAMILY</h2>
+          <span>06 oct. 2024</span>
+        </a>
+      </div>
 
-        <!-- Contrôles du carrousel -->
-        <div class="carousel-controls">
-            <button class="carousel-control" id="prev-btn">&lt;</button>
-            <button class="carousel-control" id="next-btn">&gt;</button>
-        </div>
+      <!-- Image 4 -->
+      <div class="carousel-item" style="background-image: url('images/orange.jpg');">
+        <a href="ORANGE.html" target="_blank">
+          <h2>ORANGE</h2>
+          <span>06 oct. 2024</span>
+        </a>
+      </div>
     </div>
-</section>
 
+    <!-- Contrôles du carrousel -->
+    <div id="carousel-controls">
+      <button id="prev-btn">Précédent</button>
+      <button id="next-btn">Suivant</button>
+    </div>
+  </section>
+
+  <script>
+    // Variables pour le carrousel
+    const carousel = document.getElementById('image-carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.getElementById('prev-btn');
+    const nextButton = document.getElementById('next-btn');
+    let currentIndex = 0;
+
+    // Fonction pour mettre à jour l'affichage
+    function updateCarousel() {
+      items.forEach((item, index) => {
+        item.style.display = index === currentIndex ? 'block' : 'none';
+      });
+    }
+
+    // Gestion du bouton "Suivant"
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % items.length;
+      updateCarousel();
+    });
+
+    // Gestion du bouton "Précédent"
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      updateCarousel();
+    });
+
+    // Initialisation
+    updateCarousel();
+  </script>
+
+	  
     <section class="u-clearfix u-grey-90 u-section-3" id="sec-93ed">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width u-blog-1">
