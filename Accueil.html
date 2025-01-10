@@ -154,11 +154,11 @@
 
 
 
-  <!-- Section du carrousel -->
-  <section id="sec-9435">
-    <div id="image-carousel">
+   <!-- Section du carrousel unique -->
+  <section id="carousel-unique-section">
+    <div id="carousel-unique">
       <!-- Image 1 -->
-      <div class="carousel-item" style="background-image: url('images/bleach1.jpg');">
+      <div class="carousel-unique-item" style="background-image: url('images/bleach1.jpg');">
         <a href="BLEACH.html" target="_blank">
           <h2>BLEACH</h2>
           <span>08 janv. 2025</span>
@@ -166,7 +166,7 @@
       </div>
 
       <!-- Image 2 -->
-      <div class="carousel-item" style="background-image: url('images/onepiece.jpeg');">
+      <div class="carousel-unique-item" style="background-image: url('images/onepiece.jpeg');">
         <a href="ONEPIECE.html" target="_blank">
           <h2>ONE PIECE</h2>
           <span>06 oct. 2024</span>
@@ -174,7 +174,7 @@
       </div>
 
       <!-- Image 3 -->
-      <div class="carousel-item" style="background-image: url('images/spyxfamily.png');">
+      <div class="carousel-unique-item" style="background-image: url('images/spyxfamily.png');">
         <a href="SPYXFAMILY.html" target="_blank">
           <h2>SPY-X-FAMILY</h2>
           <span>06 oct. 2024</span>
@@ -182,7 +182,7 @@
       </div>
 
       <!-- Image 4 -->
-      <div class="carousel-item" style="background-image: url('images/orange.jpg');">
+      <div class="carousel-unique-item" style="background-image: url('images/orange.jpg');">
         <a href="ORANGE.html" target="_blank">
           <h2>ORANGE</h2>
           <span>06 oct. 2024</span>
@@ -190,44 +190,43 @@
       </div>
     </div>
 
-    <!-- Contrôles du carrousel -->
-    <div id="carousel-controls">
-      <button id="prev-btn">Précédent</button>
-      <button id="next-btn">Suivant</button>
+    <!-- Contrôles du carrousel unique -->
+    <div id="carousel-unique-controls">
+      <button id="carousel-unique-prev-btn">Précédent</button>
+      <button id="carousel-unique-next-btn">Suivant</button>
     </div>
   </section>
 
   <script>
-    // Variables pour le carrousel
-    const carousel = document.getElementById('image-carousel');
-    const items = document.querySelectorAll('.carousel-item');
-    const prevButton = document.getElementById('prev-btn');
-    const nextButton = document.getElementById('next-btn');
-    let currentIndex = 0;
+    // Variables pour le carrousel unique
+    const uniqueCarousel = document.getElementById('carousel-unique');
+    const uniqueItems = document.querySelectorAll('.carousel-unique-item');
+    const uniquePrevButton = document.getElementById('carousel-unique-prev-btn');
+    const uniqueNextButton = document.getElementById('carousel-unique-next-btn');
+    let uniqueCurrentIndex = 0;
 
-    // Fonction pour mettre à jour l'affichage
-    function updateCarousel() {
-      items.forEach((item, index) => {
-        item.style.display = index === currentIndex ? 'block' : 'none';
+    // Fonction pour mettre à jour l'affichage du carrousel unique
+    function updateUniqueCarousel() {
+      uniqueItems.forEach((item, index) => {
+        item.style.display = index === uniqueCurrentIndex ? 'block' : 'none';
       });
     }
 
-    // Gestion du bouton "Suivant"
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel();
+    // Gestion du bouton "Suivant" du carrousel unique
+    uniqueNextButton.addEventListener('click', () => {
+      uniqueCurrentIndex = (uniqueCurrentIndex + 1) % uniqueItems.length;
+      updateUniqueCarousel();
     });
 
-    // Gestion du bouton "Précédent"
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateCarousel();
+    // Gestion du bouton "Précédent" du carrousel unique
+    uniquePrevButton.addEventListener('click', () => {
+      uniqueCurrentIndex = (uniqueCurrentIndex - 1 + uniqueItems.length) % uniqueItems.length;
+      updateUniqueCarousel();
     });
 
-    // Initialisation
-    updateCarousel();
+    // Initialisation du carrousel unique
+    updateUniqueCarousel();
   </script>
-
 	  
     <section class="u-clearfix u-grey-90 u-section-3" id="sec-93ed">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
