@@ -57,8 +57,9 @@
 
   /* Conteneur principal */
   .slide-container {
-    position: relative;
-    width: 100%;
+    position: centre;
+    width: 50%;
+    height: 750px;
     overflow: hidden; /* Masque les parties en dehors du carrousel */
     background-color: #000; /* Optionnel */
   }
@@ -66,7 +67,7 @@
   /* Wrapper pour les slides */
   .slide-wrapper {
     display: flex; /* Arrange les éléments en ligne */
-    transition: transform 0.5s ease; /* Transition pour le mouvement */
+    transition: transform 0.05s ease; /* Transition pour le mouvement */
     will-change: transform;
   }
 
