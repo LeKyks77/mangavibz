@@ -78,10 +78,11 @@
     padding: 10px; /* Optionnel pour espacer */
   }
 
-  /* Images */
+  /* Images uniformes */
   .slide-item img {
     width: 100%; /* S'adapte à la largeur du conteneur */
-    height: auto; /* Conserve les proportions */
+    height: 300px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Recadre l'image pour remplir le conteneur */
     border-radius: 8px; /* Coins arrondis optionnels */
   }
 
