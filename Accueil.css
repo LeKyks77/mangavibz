@@ -55,49 +55,86 @@
 
 
 
+/* Conteneur principal du carrousel */
+#slide-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 
-    /* Styles pour le carrousel */
-    #carousel-unique-section {
-      width: 90%;
-      margin: auto;
-      overflow: hidden;
-    }
+/* Les images à l'intérieur des slides */
+.slide-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
-    #carousel-unique {
-      display: flex;
-      gap: 10px;
-      transition: transform 0.5s ease-in-out;
-    }
+/* Contrôles */
+.slide-control-prev,
+.slide-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
 
-    .carousel-unique-item {
-      min-width: calc(25% - 10px); /* 4 éléments visibles */
-      height: 300px; /* Hauteur fixe pour les rectangles */
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      flex-shrink: 0;
-    }
+.slide-control-prev {
+  left: 10px;
+}
 
-    #carousel-unique-controls {
-      text-align: center;
-      margin-top: 10px;
-    }
+.slide-control-next {
+  right: 10px;
+}
 
-    button {
-      padding: 10px 20px;
-      margin: 5px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      background-color: #007BFF;
-      color: white;
-      font-size: 16px;
-    }
+.slide-control-prev-icon,
+.slide-control-next-icon {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
 
-    button:hover {
-      background-color: #0056b3;
-    }
+.slide-control-prev-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,<svg ...>');
+}
+
+.slide-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,<svg ...>');
+}
+
+/* Transition entre les slides */
+.slide-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+  flex: 0 0 25%; /* Affiche 4 images côte à côte */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-fade .slide-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide-fade .slide-item.active {
+  opacity: 1;
+}
+
+
+
+
 
 /* --- Section 2 --- */
 .u-section-2 {
