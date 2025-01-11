@@ -67,7 +67,7 @@
 /* Wrapper pour les slides */
 .slide-wrapper {
   display: flex; /* Arrange les éléments horizontalement */
-  animation: scroll 20s linear infinite; /* Animation continue */
+  animation: scroll 25s linear infinite; /* Animation continue */
 }
 
 /* Chaque slide */
