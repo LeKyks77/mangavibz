@@ -56,42 +56,48 @@
 
 
 
-/* --- Nouveau Carrousel --- */
-#image-carousel {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
+    /* Styles pour le carrousel */
+    #carousel-unique-section {
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
 
-.carousel-item {
-  min-width: 100%;
-  height: 400px; /* Ajustez la hauteur selon vos besoins */
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease-in-out;
-}
+    #carousel-unique {
+      display: flex;
+      gap: 10px;
+      transition: transform 0.5s ease-in-out;
+    }
 
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 10;
-}
+    .carousel-unique-item {
+      min-width: calc(25% - 10px); /* 4 éléments visibles */
+      height: 300px; /* Hauteur fixe pour les rectangles */
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
+    }
 
-.carousel-control {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
+    #carousel-unique-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
 
-.carousel-control:focus {
-  outline: none;
-}
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
 
 /* --- Section 2 --- */
 .u-section-2 {
