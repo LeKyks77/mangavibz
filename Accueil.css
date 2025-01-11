@@ -58,7 +58,7 @@
   /* Conteneur principal */
   .slide-container {
     position: relative;
-    width: 100%;
+    width: 1920px;
     height: 750px;
     overflow: hidden; /* Masque les parties en dehors du carrousel */
     background-color: #000; /* Optionnel */
