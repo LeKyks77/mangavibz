@@ -82,6 +82,7 @@
   width: 750px;
   height: 530px;
   object-fit: cover; /* Recadre l'image pour remplir le conteneur */
+  border-radius: 8px;
 }
 
 /* Animation */
