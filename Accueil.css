@@ -66,7 +66,7 @@
   /* Wrapper pour les slides */
   .slide-wrapper {
     display: flex; /* Arrange les éléments en ligne */
-    transition: transform 0.5s ease; /* Transition pour le mouvement */
+    transition: transform 0.1s ease; /* Transition pour le mouvement */
     will-change: transform;
   }
 
