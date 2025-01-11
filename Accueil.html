@@ -153,13 +153,13 @@
 </section>
 
 
-
-<div id="slideCarousel" class="slide-container">
+<section>
+	  <div id="slideCarousel" class="slide-container">
   <div class="slide-wrapper">
     <!-- Slide 1 -->
     <div class="slide-item">
       <a href="https://example.com/image1" target="_blank">
-        <img src="images/bleach1.jpg" alt="Image 1">
+        <img src="images/bleach.jpg" alt="Image 1">
       </a>
     </div>
     <!-- Slide 2 -->
@@ -174,24 +174,31 @@
         <img src="images/spyxfamily.png" alt="Image 3">
       </a>
     </div>
+    <!-- Slide 4 -->
+    <div class="slide-item">
+      <a href="https://example.com/image4" target="_blank">
+        <img src="images/orange.jpg" alt="Image 4">
+      </a>
+    </div>
     <!-- Add more slides as needed -->
   </div>
 </div>
-	  <script>
-		document.addEventListener("DOMContentLoaded", function () {
- 	 const slideContainer = document.querySelector("#slide-container");
-  	const slides = slideContainer.querySelectorAll(".slide-item");
- 	 let currentIndex = 0;
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slideWrapper = document.querySelector(".slide-wrapper");
+    const slideItems = document.querySelectorAll(".slide-item");
+    let currentIndex = 0;
+    const totalSlides = slideItems.length;
+    const slideWidth = slideItems[0].clientWidth;
 
- 	 function showNextSlide() {
-  	  slides[currentIndex].classList.remove("active");
-  	  currentIndex = (currentIndex + 1) % slides.length;
-  	  slides[currentIndex].classList.add("active");
- 	 }
-
-	  setInterval(showNextSlide, 3000); // Change toutes les 3 secondes
-	});
-	  </script>
+    // Défilement automatique
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides; // Boucle infinie
+      slideWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }, 3000); // Change toutes les 3 secondes
+  });
+</script>
+</section>
 	  
     <section class="u-clearfix u-grey-90 u-section-3" id="sec-93ed">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
