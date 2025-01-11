@@ -156,49 +156,18 @@
 <section>
 <div class="slide-container">
   <div class="slide-wrapper" id="carousel">
-    <!-- Dupliquer les images en début et en fin -->
-    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div> <!-- Copie de la dernière image -->
+    <!-- Images dupliquées pour l'effet infini -->
     <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
     <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
     <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY-X-FAMILY"></div>
     <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
-    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div> <!-- Copie de la première image -->
+    <!-- Duplication pour continuité -->
+    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
+    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
+    <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY-X-FAMILY"></div>
+    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
   </div>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carousel");
-  const slides = document.querySelectorAll(".slide-item");
-  const slideCount = slides.length;
-
-  let currentIndex = 1; // Commence après la copie de la dernière image
-  const slideWidth = slides[0].offsetWidth;
-
-  // Place le carrousel au premier élément réel
-  carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-
-  function moveCarousel() {
-    currentIndex++;
-
-    // Transition normale
-    carousel.style.transition = "transform 0.5s ease";
-    carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-
-    // Vérifie si on atteint les limites pour "reset" instantanément
-    setTimeout(() => {
-      if (currentIndex === slideCount - 1) {
-        // Dernière copie atteinte, on revient au début réel
-        currentIndex = 1;
-        carousel.style.transition = "none"; // Supprime l'animation
-        carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-      }
-    }, 500);
-  }
-
-  // Démarre le carrousel
-  setInterval(moveCarousel, 2000); // 2 secondes entre chaque déplacement
-});
-</script>
 </section>
 	  
     <section class="u-clearfix u-grey-90 u-section-3" id="sec-93ed">
