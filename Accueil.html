@@ -154,49 +154,32 @@
 
 
 <section>
-	  <div id="slideCarousel" class="slide-container">
-  <div class="slide-wrapper">
-    <!-- Slide 1 -->
-    <div class="slide-item">
-      <a href="https://example.com/image1" target="_blank">
-        <img src="images/bleach1.jpg" alt="Image 1">
-      </a>
-    </div>
-    <!-- Slide 2 -->
-    <div class="slide-item">
-      <a href="https://example.com/image2" target="_blank">
-        <img src="images/onepiece.jpeg" alt="Image 2">
-      </a>
-    </div>
-    <!-- Slide 3 -->
-    <div class="slide-item">
-      <a href="https://example.com/image3" target="_blank">
-        <img src="images/spyxfamily.png" alt="Image 3">
-      </a>
-    </div>
-    <!-- Slide 4 -->
-    <div class="slide-item">
-      <a href="https://example.com/image4" target="_blank">
-        <img src="images/orange.jpg" alt="Image 4">
-      </a>
-    </div>
-    <!-- Add more slides as needed -->
+<div class="slide-container">
+  <div class="slide-wrapper" id="carousel-wrapper">
+    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
+    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
+    <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY X FAMILY"></div>
+    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
+    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div> <!-- Répétition pour boucle -->
+    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
   </div>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const slideWrapper = document.querySelector(".slide-wrapper");
-    const slideItems = document.querySelectorAll(".slide-item");
-    let currentIndex = 0;
-    const totalSlides = slideItems.length;
-    const slideWidth = slideItems[0].clientWidth;
+  const wrapper = document.getElementById('carousel-wrapper');
+  let scrollAmount = 0;
 
-    // Défilement automatique
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % totalSlides; // Boucle infinie
-      slideWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    }, 1000); // Change toutes les 1 secondes
-  });
+  function continuousScroll() {
+    scrollAmount += 1; // Ajuste la vitesse en modifiant cette valeur
+    wrapper.style.transform = `translateX(-${scrollAmount}px)`;
+
+    if (scrollAmount >= wrapper.offsetWidth / 2) {
+      scrollAmount = 0; // Réinitialise pour un effet de boucle continue
+    }
+
+    requestAnimationFrame(continuousScroll);
+  }
+
+  continuousScroll();
 </script>
 </section>
 	  
