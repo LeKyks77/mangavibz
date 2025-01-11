@@ -10,18 +10,18 @@
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 7.2.3, nicepage.com">
-    
-    
+
+
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Bootstrap JS + Popper.js -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    
-    
-    
-    
+
+
+
+
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -52,11 +52,11 @@
             <a href="#" class="u-black u-btn u-button-style u-text-body-alt-color u-btn-1">Se connecter</a>
             <a href="#" class="u-btn u-btn-round u-button-style u-custom-color-1 u-radius-10 u-text-body-alt-color u-btn-2">S'inscrire</a>
           </div>
-          
-          
-          
-          
-          
+
+
+
+
+
         </div>
         <div class="u-black u-section-row u-sticky u-sticky-efe7 u-section-row-2" id="sec-1c6d">
           <div class="u-clearfix u-sheet u-sheet-2">
@@ -104,20 +104,20 @@
                 }</style>
             </nav>
           </div>
-          
-          
-          
+
+
+
         </div>
       </div></header>
 <section class="u-align-center u-clearfix u-container-align-center u-valign-middle u-section-1" id="carousel_74e2">
   <div id="carousel-6492" class="carousel slide" data-bs-ride="carousel">
-    
+
     <!-- Indicateurs -->
     <ol class="carousel-indicators">
       <li data-bs-target="#carousel-6492" data-bs-slide-to="0" class="active"></li>
       <li data-bs-target="#carousel-6492" data-bs-slide-to="1"></li>
     </ol>
-    
+
     <!-- Contenu du carrousel -->
     <div class="carousel-inner">
       <!-- Première image -->
@@ -127,7 +127,7 @@
           <h5 class="mangavibz-title">MANGAVIBZ</h5>
         </div>
       </div>
-      
+
       <!-- Deuxième image -->
       <div class="carousel-item">
         <img src="images/img2.jpg" class="d-block w-100" alt="Image 2">
@@ -142,93 +142,34 @@
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Précédent</span>
     </a>
-    
+
     <!-- Contrôle droit -->
     <a class="carousel-control-next" href="#carousel-6492" role="button" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Suivant</span>
     </a>
-    
+
   </div>
 </section>
 
+
 <section>
-  <div class="slide-container">
-    <div class="slide-wrapper">
-      <!-- Duplicates at the end -->
-      <div class="slide-item">
-        <a href="ORANGE.html" target="_blank">
-          <img src="images/orange.jpg" alt="ORANGE">
-        </a>
-      </div>
-      <!-- Original slides -->
-      <div class="slide-item">
-        <a href="BLEACH.html" target="_blank">
-          <img src="images/bleach1.jpg" alt="BLEACH">
-        </a>
-      </div>
-      <div class="slide-item">
-        <a href="ONEPIECE.html" target="_blank">
-          <img src="images/onepiece.jpeg" alt="ONE PIECE">
-        </a>
-      </div>
-      <div class="slide-item">
-        <a href="SPYXFAMILY.html" target="_blank">
-          <img src="images/spyxfamily.png" alt="SPY-X-FAMILY">
-        </a>
-      </div>
-      <div class="slide-item">
-        <a href="ORANGE.html" target="_blank">
-          <img src="images/orange.jpg" alt="ORANGE">
-        </a>
-      </div>
-      <!-- Duplicates at the beginning -->
-      <div class="slide-item">
-        <a href="BLEACH.html" target="_blank">
-          <img src="images/bleach1.jpg" alt="BLEACH">
-        </a>
-      </div>
-    </div>
+<div class="slide-container">
+  <div class="slide-wrapper" id="carousel">
+    <!-- Images dupliquées pour l'effet infini -->
+    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
+    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
+    <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY-X-FAMILY"></div>
+    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
+    <!-- Duplication pour continuité -->
+    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
+    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
+    <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY-X-FAMILY"></div>
+    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
   </div>
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-  const wrapper = document.querySelector(".slide-wrapper");
-  const slides = document.querySelectorAll(".slide-item");
-  const slideCount = slides.length;
-  const slideWidth = slides[0].offsetWidth;
-  let index = 1; // Start from the first real slide
-  let offset = slideWidth; // Initial offset based on the width
+</div>
+</section>
 
-  // Set initial position
-  wrapper.style.transform = `translateX(-${offset}px)`;
-
-  // Infinite sliding function
-  function slide() {
-    index++;
-    wrapper.style.transition = "transform 0.5s linear";
-    wrapper.style.transform = `translateX(-${index * slideWidth}px)`;
-
-    // Handle wrap-around after animation
-    wrapper.addEventListener("transitionend", () => {
-      if (index === slideCount - 1) {
-        // If we've reached the duplicate at the end
-        index = 1; // Jump back to the first real slide
-        wrapper.style.transition = "none";
-        wrapper.style.transform = `translateX(-${index * slideWidth}px)`;
-      } else if (index === 0) {
-        // If we've reached the duplicate at the beginning
-        index = slideCount - 2; // Jump to the last real slide
-        wrapper.style.transition = "none";
-        wrapper.style.transform = `translateX(-${index * slideWidth}px)`;
-      }
-    });
-  }
-
-  // Start the sliding loop
-  setInterval(slide, 2000); // Adjust 2000ms for the desired speed
-});
-</script>
-</section> 
     <section class="u-clearfix u-grey-90 u-section-3" id="sec-93ed">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width u-blog-1">
@@ -455,9 +396,9 @@
         </div>
       </div>
     </section>
-    
-    
-    
+
+
+
     <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-1624"><div class="u-clearfix u-sheet u-sheet-1"></div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
       <p class="u-text">
@@ -470,5 +411,5 @@
       <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
       <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
     </span>
-  
+
 </body></html>
