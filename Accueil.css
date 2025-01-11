@@ -55,47 +55,44 @@
 
 
 
-/* Conteneur principal */
+/* Main container */
 .slide-container {
   position: relative;
   width: 100%;
   height: 750px;
-  overflow: hidden;
-  background-color: #000;
+  overflow: hidden; /* Hide anything outside the slider */
+  background-color: #000; /* Optional background */
 }
 
-/* Wrapper pour les slides */
+/* Wrapper for slides */
 .slide-wrapper {
   display: flex;
-  width: calc(540px * 8); /* 8 images au total */
-  animation: scroll 20s linear infinite; /* Animation continue */
+  transition: transform 0.5s linear; /* Smooth scrolling */
+  will-change: transform;
 }
 
-/* Chaque slide */
+/* Each slide */
 .slide-item {
-  flex: 0 0 auto; /* Chaque slide prend sa taille intrinsèque */
-  width: 540px;
-  height: 740px;
-  padding: 10px;
-  box-sizing: border-box;
+  flex: 0 0 25%; /* Each image takes 25% of the width to show 4 slides */
+  max-width: 25%; /* Same as above */
+  box-sizing: border-box; /* Include padding/border in the size */
+  padding: 10px; /* Optional spacing */
 }
 
+/* Images */
 .slide-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%; /* Responsive width */
+  height: 100%; /* Responsive height */
+  object-fit: cover; /* Ensure the image fills its container */
+  border-radius: 8px; /* Optional rounded corners */
 }
 
-/* Animation continue */
-@keyframes scroll {
-  from {
-    transform: translateX(0); /* Début du défilement */
-  }
-  to {
-    transform: translateX(-2160px); /* -540px * 4 (taille totale des images uniques) */
-  }
+/* Link styles */
+.slide-item a {
+  display: block; /* Make the entire slide clickable */
+  text-decoration: none; /* Remove underline */
 }
+
 
 
 
