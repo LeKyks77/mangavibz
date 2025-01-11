@@ -80,8 +80,8 @@
 
 /* Images uniformes */
 .slide-item img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover; /* Recadre l'image pour remplir le conteneur */
   border-radius: 8px;
 }
