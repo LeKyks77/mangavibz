@@ -79,8 +79,8 @@
 
 /* Images uniformes */
 .slide-item img {
-  width: 750px;
-  height: 530px;
+  width: 90%;
+  height: 90%;
   object-fit: cover; /* Recadre l'image pour remplir le conteneur */
   border-radius: 8px;
 }
