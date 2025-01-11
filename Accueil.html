@@ -152,22 +152,83 @@
   </div>
 </section>
 
-
-<div class="slide-container">
-  <div class="slide-wrapper" id="carousel">
-    <!-- Images dupliquées pour l'effet infini -->
-    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
-    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
-    <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY-X-FAMILY"></div>
-    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
-    <!-- Duplication pour continuité -->
-    <div class="slide-item"><img src="images/bleach1.jpg" alt="BLEACH"></div>
-    <div class="slide-item"><img src="images/onepiece.jpeg" alt="ONE PIECE"></div>
-    <div class="slide-item"><img src="images/spyxfamily.png" alt="SPY-X-FAMILY"></div>
-    <div class="slide-item"><img src="images/orange.jpg" alt="ORANGE"></div>
+<section>
+  <div class="slide-container">
+    <div class="slide-wrapper">
+      <!-- Duplicates at the end -->
+      <div class="slide-item">
+        <a href="ORANGE.html" target="_blank">
+          <img src="images/orange.jpg" alt="ORANGE">
+        </a>
+      </div>
+      <!-- Original slides -->
+      <div class="slide-item">
+        <a href="BLEACH.html" target="_blank">
+          <img src="images/bleach1.jpg" alt="BLEACH">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="ONEPIECE.html" target="_blank">
+          <img src="images/onepiece.jpeg" alt="ONE PIECE">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="SPYXFAMILY.html" target="_blank">
+          <img src="images/spyxfamily.png" alt="SPY-X-FAMILY">
+        </a>
+      </div>
+      <div class="slide-item">
+        <a href="ORANGE.html" target="_blank">
+          <img src="images/orange.jpg" alt="ORANGE">
+        </a>
+      </div>
+      <!-- Duplicates at the beginning -->
+      <div class="slide-item">
+        <a href="BLEACH.html" target="_blank">
+          <img src="images/bleach1.jpg" alt="BLEACH">
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-	  
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector(".slide-wrapper");
+  const slides = document.querySelectorAll(".slide-item");
+  const slideCount = slides.length;
+  const slideWidth = slides[0].offsetWidth;
+  let index = 1; // Start from the first real slide
+  let offset = slideWidth; // Initial offset based on the width
+
+  // Set initial position
+  wrapper.style.transform = `translateX(-${offset}px)`;
+
+  // Infinite sliding function
+  function slide() {
+    index++;
+    wrapper.style.transition = "transform 0.5s linear";
+    wrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    // Handle wrap-around after animation
+    wrapper.addEventListener("transitionend", () => {
+      if (index === slideCount - 1) {
+        // If we've reached the duplicate at the end
+        index = 1; // Jump back to the first real slide
+        wrapper.style.transition = "none";
+        wrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+      } else if (index === 0) {
+        // If we've reached the duplicate at the beginning
+        index = slideCount - 2; // Jump to the last real slide
+        wrapper.style.transition = "none";
+        wrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+    });
+  }
+
+  // Start the sliding loop
+  setInterval(slide, 2000); // Adjust 2000ms for the desired speed
+});
+</script>
+</section> 
     <section class="u-clearfix u-grey-90 u-section-3" id="sec-93ed">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--blog--><!--blog_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/blog_options_json-->
         <div class="u-blog u-expanded-width u-blog-1">
