@@ -59,7 +59,7 @@
 .slide-container {
   position: relative;
   width: 100%;
-  height: 750px;
+  height: 800px;
   overflow: hidden; /* Cache les parties hors de la vue */
   background-color: #000; /* Optionnel */
 }
