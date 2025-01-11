@@ -72,7 +72,7 @@
 
 /* Chaque slide */
 .slide-item {
-  flex: 0 0 25%; /* Chaque slide occupe 25% de la largeur (4 slides visibles) */
+  flex: 0 0 20%; /* Chaque slide occupe 25% de la largeur (4 slides visibles) */
   max-width: 25%; /* Limite à 25% pour chaque slide */
   box-sizing: border-box;
   padding: 0px;
@@ -83,7 +83,6 @@
   width: 90%;
   height: 90%;
   object-fit: cover; /* Recadre l'image pour remplir le conteneur */
-  border-radius: 8px;
 }
 
 /* Animation */
